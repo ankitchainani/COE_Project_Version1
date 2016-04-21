@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+    <head>
+        <title>User Profile</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- Script for checking cookie present or not -->
+        
+    </head>
+  <body>
+        
+        <div class="container-fluid" id="main">
+
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="#">COE Digital Measures</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.php">Home</a></li>
+                             <li><a href="active">Personal Info</a></li>
+                            <li><a href="customer_view.php">Education</a></li>
+                            <li><a href="#">Awards and Honors</a></li>
+                            
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row" style="margin-top:40px">
+                    <div class="col-sm-8">
+                        <h2>You are currently viewing this profile as <b>Admin</b></h2>
+                        <br/>
+                        <form action="personal.php" method="post">
+                            <div class="form-group row">
+                                <label for="fName" class="col-sm-3 form-control-label" style="text-align: right;">First Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="fName" name="fName" placeholder="Enter First Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lName" class="col-sm-3 form-control-label" style="text-align: right;">Last Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="lName" name="lName"  placeholder="Enter last name">
+                                </div>
+                            </div>
+                             <div class="form-group row">
+                                <label for="email" class="col-sm-3 form-control-label" style="text-align: right;">Email:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">
+                                </div>
+                            </div><br>
+                            <hr><br>
+                            <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Office Location
+                                        <span class="caret"></span></button>
+                                <ul class="dropdown-menu" class="form-control" id="locationdd">
+                                            <li><a href="#">DeGarmo Hall</a></li>
+                                            <li><a href="#">Old Union</a></li>
+                                            <li><a href="#">Example
+                                                </a></li>
+                                        </ul>
+                                            </div>
+                    
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-3 form-control-label" style="text-align: right;">Email:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Office Phone:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="officephone" name="officephone" placeholder="Enter Office phone">
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Department Phone:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="deptphone" name="deptphone" placeholder="Enter Department Phone">
+                                </div>
+                            </div>
+                             <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Fax:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="faxphone" name="faxphone" placeholder="Enter Fax Number">
+                                </div>
+                            </div><br>
+                                    <hr><br>
+                                        <div class="form-group">
+                                        <label for="comment">Office Hours:</label>
+                                        <textarea class="form-control" rows="5" id="comment" placeholder="Please Enter your office hours in the format like M-F Timings: 00:00 AM/PM, Also mention if (by appointment)"></textarea>
+                            </div><br>
+                                    <hr><br>
+                            
+                             <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Personal Website:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="website" name="url" placeholder="Enter the URL">
+                                </div>
+                            <br>
+                                    <hr><br>
+                                 
+                             <div class="form-group">
+                                        <label for="comment">Brief Biography</label>
+                                        <textarea class="form-control" rows="5" id="comment" placeholder="Biography..."></textarea>
+                            </div>
+                                 <div class="checkbox">
+                        <label><input type="checkbox" value="">Academic Culture</label>
+                                        </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox" value="">Ethics</label>
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox" value="">SED</label>
+                            </div> <div class="checkbox">
+                              <label><input type="checkbox" value="">TCH</label>
+                            </div> <div class="checkbox">
+                              <label><input type="checkbox" value="">Achievemnt Gap</label>
+                            </div>
+                                    
+                            Select image to upload:
+                                 <input type="file" name="fileToUpload" id="fileToUpload">
+                                 <input type="submit" value="Upload Image" name="submit">
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="form-group row">
+                                <label for="fName" class="col-sm-3 form-control-label" style="text-align: right;"></label>
+                                <div class="col-sm-9">
+                                    <button type="submit" class="btn" id="submitBtn">Submit</button>
+                                </div>
+                            </div>						
+                       
+                    </div>
+                                     </form>
+                </div><!-- end row -->
+            </div>
+        </div><!-- end container -->
+    </body>
+</html>

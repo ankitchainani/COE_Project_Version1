@@ -1,0 +1,109 @@
+
+
+<?php
+session_start();
+
+if (!isset($_SESSION["user"]))
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Profile- Awards and Honors</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- Script for checking cookie present or not -->
+        
+    </head>
+  <body>
+        
+        <div class="container-fluid" id="main">
+
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a class="navbar-brand" href="#">COE Digital Measures</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.php">Home</a></li>
+                             <li><a href="../Profile/Personal.html">Personal Info</a></li>
+                            <li><a href="../Profile/Awards and Honors.html">Education</a></li>
+                            <li><a href="#">Awards and Honors</a></li>
+                            
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row" style="margin-top:40px">
+                    <div class="col-sm-8">
+                        <h2>You are currently viewing this profile as <b>Admin</b></h2>
+                        <br/>
+                        <form action="personal.php" method="post">
+                            <br />
+                            <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Degree
+                                        <span class="caret"></span></button>
+                                <ul class="dropdown-menu" class="form-control" id="degree">
+                                            <li><a href="#">BBA</a></li>
+                                            <li><a href="#">BS</a></li>
+                                            <li><a href="#">DBA</a></li>
+                                            <li><a href="#">EDD</a></li>
+                                            <li><a href="#">JD</a></li>
+                                            <li><a href="#">LLM</a></li>
+                                            <li><a href="#">MA</a></li>
+                                            <li><a href="#">MBA</a></li>
+                                            <li><a href="#">MS</a></li>
+                                            <li><a href="#">PhD</a></li>
+                                            <li><a href="#">Other</a></li>
+                                </ul>
+                                <label><b>If selected "other" in above option, please mention below</b></label><div class="col-sm-9">
+                                    <input type="text" class="form-control" id="other" name="other">
+                                </div>
+                                            </div>
+                    
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-3 form-control-label" style="text-align: right;">Award or Honor Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="award" name="Award">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Organization</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="org" name="Org" placeholder="Name of Organization">
+                                </div>
+                            </div>
+                              <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Emphasis/Major</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="major" name="major" placeholder="Enter your Concentration">
+                                </div>
+                            </div>
+                             <div class="form-group row">
+                                <label for="phone" class="col-sm-3 form-control-label" style="text-align: right;">Year Completed: </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="yr_comp" name="yr_comp">
+                                </div>
+                            </div><br>
+                                  
+
+                                                            </form>
+
+                </div><!-- end row -->
+            </div>
+        </div><!-- end container -->
+    </body>
+</html>
+
